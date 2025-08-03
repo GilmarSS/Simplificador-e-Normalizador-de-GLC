@@ -1,0 +1,48 @@
+--- Gramática Inicial para FNC ---
+Símbolo Inicial: S
+Não-terminais: A, B, S
+Terminais: a, b
+Produções:
+A -> Aab | b
+B -> Bb | a
+S -> aA | bB
+
+
+--- Após remover recursão à esquerda ---
+Símbolo Inicial: S
+Não-terminais: A, A', B, B', S
+Terminais: a, b
+Produções:
+A -> bA'
+A' -> abA' | ε
+B -> aB'
+B' -> bB' | ε
+S -> aA | bB
+
+
+--- Após fatoração à esquerda ---
+Símbolo Inicial: S
+Não-terminais: A, A', B, B', S
+Terminais: a, b
+Produções:
+A -> bA'
+A' -> abA' | ε
+B -> aB'
+B' -> bB' | ε
+S -> aA | bB
+
+
+--- Gramática em Forma Normal de Chomsky (FNC) ---
+Símbolo Inicial: S
+Não-terminais: A, A', X1, B, B', S
+Terminais: a, b
+Produções:
+A -> X1A'
+A' -> X1B
+X1 -> aB
+B -> aB'
+B' -> X2B' | ε
+X2 -> b
+S -> X3A | X4B
+X3 -> a
+X4 -> b

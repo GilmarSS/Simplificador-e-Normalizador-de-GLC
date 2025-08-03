@@ -1,0 +1,38 @@
+--- Gramática Original ---
+Símbolo Inicial: S
+Não-terminais: A, B, S
+Terminais: a, b, c, d
+Produções:
+A -> c | ε
+B -> d
+S -> aA | bB
+
+
+--- Após remover símbolos inúteis ---
+Símbolo Inicial: S
+Não-terminais: A, B, S
+Terminais: a, b, c, d
+Produções:
+A -> c | ε
+B -> d
+S -> aA | bB
+
+
+--- Após remover produções vazias ---
+Símbolo Inicial: S
+Não-terminais: A, B, S
+Terminais: a, b, c, d
+Produções:
+A -> c
+B -> d
+S -> aA | bB | a
+
+
+--- Após remover produções unitárias ---
+Símbolo Inicial: S
+Não-terminais: A, B, S
+Terminais: a, b, c, d
+Produções:
+A -> c
+B -> d
+S -> aA | bB | a
